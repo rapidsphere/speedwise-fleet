@@ -22,6 +22,16 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
+        },
+        fleet: {
+          success: "hsl(var(--fleet-success))",
+          "success-foreground": "hsl(var(--fleet-success-foreground))",
+          warning: "hsl(var(--fleet-warning))",
+          "warning-foreground": "hsl(var(--fleet-warning-foreground))",
+          danger: "hsl(var(--fleet-danger))",
+          "danger-foreground": "hsl(var(--fleet-danger-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
