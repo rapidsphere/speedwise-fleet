@@ -7,6 +7,12 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import FleetLayout from "@/components/fleet/FleetLayout";
 import DashboardPage from "@/components/fleet/DashboardPage";
 import VehiclesPage from "./pages/VehiclesPage";
+import UserManagementPage from "@/components/fleet/UserManagementPage";
+import ClientManagementPage from "@/components/fleet/ClientManagementPage";
+import DriverManagementPage from "@/components/fleet/DriverManagementPage";
+import AttendanceManagementPage from "@/components/fleet/AttendanceManagementPage";
+import DieselManagementPage from "@/components/fleet/DieselManagementPage";
+import ReportsPage from "@/components/fleet/ReportsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,12 +28,12 @@ const App = () => (
             <Routes>
               <Route path="/" element={<DashboardPage />} />
               <Route path="/vehicles" element={<VehiclesPage />} />
-              <Route path="/users" element={<div className="p-6"><h1 className="text-2xl font-bold">User Management</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
-              <Route path="/clients" element={<div className="p-6"><h1 className="text-2xl font-bold">Client Management</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
-              <Route path="/drivers" element={<div className="p-6"><h1 className="text-2xl font-bold">Driver Management</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
-              <Route path="/attendance" element={<div className="p-6"><h1 className="text-2xl font-bold">Attendance Management</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
-              <Route path="/diesel" element={<div className="p-6"><h1 className="text-2xl font-bold">Diesel Entry Management</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
-              <Route path="/reports" element={<div className="p-6"><h1 className="text-2xl font-bold">Reports</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
+              <Route path="/users" element={<UserManagementPage />} />
+              <Route path="/clients" element={<ClientManagementPage />} />
+              <Route path="/drivers" element={<DriverManagementPage />} />
+              <Route path="/attendance" element={<AttendanceManagementPage />} />
+              <Route path="/diesel" element={<DieselManagementPage />} />
+              <Route path="/reports" element={<ReportsPage />} />
               <Route path="/notifications" element={<div className="p-6"><h1 className="text-2xl font-bold">Notifications</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
               <Route path="/settings" element={<div className="p-6"><h1 className="text-2xl font-bold">Settings</h1><p className="text-muted-foreground">Coming soon...</p></div>} />
               <Route path="*" element={<NotFound />} />
